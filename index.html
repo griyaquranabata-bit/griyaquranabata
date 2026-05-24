@@ -1,0 +1,1343 @@
+
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griya Qur'an Abata - Pembelajaran 100% Gratis & Sanad</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        abataGreenDark: '#009d00',
+                        abataGreenLight: '#8bc34a',
+                        abataOrange: '#f97316',
+                        abataDark: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome & Lucide Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Desain kustom untuk logo teks ABATA yang mirip dengan gambar */
+        .abata-shadow {
+            text-shadow: 
+                -3px -3px 0 #fff,  
+                 3px -3px 0 #fff,
+                -3px  3px 0 #fff,
+                 3px  3px 0 #fff,
+                -4px -4px 0 #9ca3af,  
+                 4px -4px 0 #9ca3af,
+                -4px  4px 0 #9ca3af,
+                 4px  4px 0 #9ca3af;
+        }
+        /* Ornamen Islami Background */
+        .islamic-bg {
+            background-color: #fcfbf7;
+            background-image: radial-gradient(#009d0008 1px, transparent 1px), radial-gradient(#f9731608 1px, #fcfbf7 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+    </style>
+</head>
+<body class="islamic-bg text-abataDark antialiased selection:bg-abataGreenLight selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-abataGreenDark to-abataGreenLight text-white py-2.5 px-4 text-center text-xs md:text-sm font-medium flex items-center justify-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-white/20 text-white animate-pulse">KABAR GEMBIRA</span>
+        <span>Seluruh program belajar di Griya Qur'an Abata diselenggarakan 100% GRATIS tanpa dipungut biaya apa pun!</span>
+    </div>
+
+    <!-- MAIN HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo Area -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative flex items-center">
+                    <!-- Muat Logo yang diupload pengguna -->
+                    <img src="1000188764.jpg" alt="Logo Griya Qur'an Abata" class="h-14 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.style.display='none'; document.getElementById('vector-logo').classList.remove('hidden');">
+                    
+                    <!-- Backup Vector Logo jika gambar tidak terdeteksi -->
+                    <div id="vector-logo" class="hidden flex flex-col items-start leading-none">
+                        <div class="w-full h-1 bg-abataOrange rounded-full mb-1"></div>
+                        <span class="text-[10px] font-bold tracking-widest text-gray-500 uppercase">Griya Qur'an</span>
+                        <div class="flex font-extrabold text-3xl tracking-tight select-none">
+                            <span class="text-abataGreenDark abata-shadow">A</span>
+                            <span class="text-abataGreenLight abata-shadow">B</span>
+                            <span class="text-abataGreenLight abata-shadow">A</span>
+                            <span class="text-abataOrange abata-shadow">T</span>
+                            <span class="text-abataOrange abata-shadow">A</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex flex-col border-l border-gray-200 pl-3">
+                    <span class="font-bold text-gray-800 text-base leading-none">Griya Qur'an Abata</span>
+                    <span class="text-xs text-gray-500 mt-1">Weru, Sukoharjo</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#beranda" class="text-gray-600 hover:text-abataGreenDark font-semibold transition-colors">Beranda</a>
+                <a href="#tentang" class="text-gray-600 hover:text-abataGreenDark font-semibold transition-colors">Tentang Kami</a>
+                <a href="#program" class="text-gray-600 hover:text-abataGreenDark font-semibold transition-colors">Program & Waktu</a>
+                <a href="#pojok-belajar" class="text-gray-600 hover:text-abataGreenDark font-semibold transition-colors flex items-center gap-1">
+                    Pojok Belajar 
+                    <span class="bg-red-100 text-red-600 text-[10px] font-bold px-1.5 py-0.5 rounded-full">Kuis</span>
+                </a>
+                <a href="#lokasi" class="text-gray-600 hover:text-abataGreenDark font-semibold transition-colors">Alamat</a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="mailto:griyaquranabata@gmail.com" class="flex items-center gap-2 text-gray-700 bg-gray-100 hover:bg-gray-200 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all">
+                    <i data-lucide="mail" class="w-4 h-4 text-abataOrange"></i> Hubungi Email
+                </a>
+                <a href="#daftar" class="bg-gradient-to-r from-abataGreenDark to-abataGreenLight hover:brightness-110 text-white shadow-md shadow-abataGreenDark/20 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all transform active:scale-95">
+                    Daftar Gratis
+                </a>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-700 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm px-4 pt-3 pb-6 space-y-3 shadow-lg">
+            <a href="#beranda" class="block px-3 py-2 rounded-xl text-gray-700 hover:bg-gray-50 hover:text-abataGreenDark font-medium">Beranda</a>
+            <a href="#tentang" class="block px-3 py-2 rounded-xl text-gray-700 hover:bg-gray-50 hover:text-abataGreenDark font-medium">Tentang Kami</a>
+            <a href="#program" class="block px-3 py-2 rounded-xl text-gray-700 hover:bg-gray-50 hover:text-abataGreenDark font-medium">Program & Waktu</a>
+            <a href="#pojok-belajar" class="block px-3 py-2 rounded-xl text-gray-700 hover:bg-gray-50 hover:text-abataGreenDark font-medium flex items-center justify-between">
+                <span>Pojok Belajar</span>
+                <span class="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-full">Kuis</span>
+            </a>
+            <a href="#lokasi" class="block px-3 py-2 rounded-xl text-gray-700 hover:bg-gray-55 hover:text-abataGreenDark font-medium">Alamat</a>
+            <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
+                <a href="mailto:griyaquranabata@gmail.com" class="flex items-center justify-center gap-2 w-full text-gray-700 bg-gray-100 py-3 rounded-xl font-semibold">
+                    <i data-lucide="mail" class="w-4 h-4 text-abataOrange"></i> Hubungi via Email
+                </a>
+                <a href="#daftar" class="block text-center w-full bg-gradient-to-r from-abataGreenDark to-abataGreenLight text-white py-3 rounded-xl font-semibold shadow-md shadow-abataGreenDark/10">
+                    Daftar Sekarang (Gratis)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative py-12 md:py-24 overflow-hidden">
+        <!-- Background Ornaments -->
+        <div class="absolute top-0 right-0 -z-10 opacity-10">
+            <svg class="w-[30rem] h-[30rem] md:w-[45rem] md:h-[45rem] text-abataGreenDark" viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 0 L100 50 L50 100 L0 50 Z" />
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-orange-100 border border-orange-200 px-4 py-2 rounded-full text-abataOrange text-sm font-bold">
+                        <i data-lucide="check-circle" class="w-4 h-4 animate-bounce"></i>
+                        <span>PROGRAM BELAJAR 100% GRATIS TANPA BIAYA</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+                        Membimbing Hati <br class="hidden sm:inline">
+                        Menjadi Generasi <span class="text-transparent bg-clip-text bg-gradient-to-r from-abataGreenDark to-abataGreenLight">Mencintai Al-Qur'an</span>
+                    </h1>
+                    
+                    <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Griya Qur'an Abata hadir di Sukoharjo untuk memfasilitasi pembelajaran Al-Qur'an gratis, berkualitas tinggi, dibimbing oleh asatidzah kompeten dengan durasi belajar efektif **60 menit** setiap sesi.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#daftar" class="w-full sm:w-auto text-center px-8 py-4 rounded-2xl bg-gradient-to-r from-abataGreenDark to-abataGreenLight text-white font-bold text-base shadow-lg shadow-abataGreenDark/30 hover:shadow-xl hover:brightness-110 hover:-translate-y-0.5 transition-all">
+                            Gabung Sekarang (Gratis) <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#program" class="w-full sm:w-auto text-center px-8 py-4 rounded-2xl bg-white border border-gray-200 text-gray-700 font-bold text-base hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm">
+                            Lihat Jadwal Kelas
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-gray-100 max-w-lg mx-auto lg:mx-0">
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-abataGreenDark">400+</span>
+                            <span class="text-xs sm:text-sm text-gray-500 font-medium">Santri Terdaftar</span>
+                        </div>
+                        <div class="text-center lg:text-left border-x border-gray-150 px-4">
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-abataOrange">6</span>
+                            <span class="text-xs sm:text-sm text-gray-500 font-medium">Asatidzah Pengampu</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-abataGreenDark">60 Mnt</span>
+                            <span class="text-xs sm:text-sm text-gray-500 font-medium">Waktu Belajar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Area -->
+                <div class="lg:col-span-5 relative mt-8 lg:mt-0">
+                    <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
+                        <!-- Background Circle Ornament -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-abataGreenLight/20 to-abataOrange/10 rounded-full blur-3xl -z-10"></div>
+                        
+                        <!-- Premium Card Showcase -->
+                        <div class="relative bg-white/80 backdrop-blur-sm border border-white/50 rounded-[2.5rem] p-6 sm:p-8 shadow-2xl overflow-hidden">
+                            <!-- Pattern Top Right -->
+                            <div class="absolute -top-12 -right-12 w-32 h-32 bg-abataOrange/10 rounded-full"></div>
+                            
+                            <!-- Quran & Islamic Symbolism -->
+                            <div class="flex justify-center mb-6">
+                                <div class="bg-gradient-to-tr from-abataGreenDark to-abataGreenLight p-6 rounded-[2rem] text-white shadow-xl shadow-abataGreenDark/20 relative">
+                                    <i data-lucide="book-open" class="w-16 h-16"></i>
+                                    <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-abataOrange opacity-75"></span>
+                                      <span class="relative inline-flex rounded-full h-3 w-3 bg-abataOrange"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Card Widget -->
+                            <div class="text-center space-y-4">
+                                <h3 class="text-xl font-bold text-slate-800">Pembelajaran Sosial Keagamaan</h3>
+                                <p class="text-sm text-gray-500">Diorganisasi sepenuhnya untuk kemaslahatan umat. Tanpa SPP, tanpa biaya pendaftaran, fokus pada adab dan tajwid murni.</p>
+                                
+                                <!-- Quote Card -->
+                                <div class="bg-amber-50 border-l-4 border-abataOrange p-3.5 rounded-r-xl text-left">
+                                    <p class="text-xs italic text-amber-900 leading-relaxed">
+                                        "Sebaik-baik kalian adalah orang yang mempelajari Al-Qur'an dan mengajarkannya."
+                                    </p>
+                                    <span class="block text-[10px] text-amber-700 font-bold mt-1 text-right">— HR. Bukhari</span>
+                                </div>
+
+                                <!-- Floating Badge -->
+                                <div class="flex items-center justify-center gap-3 bg-white border border-gray-100 shadow-md rounded-2xl p-3 transform hover:scale-102 transition-transform">
+                                    <div class="w-10 h-10 rounded-full bg-abataGreenLight/20 flex items-center justify-center text-abataGreenDark">
+                                        <i class="fas fa-gift text-sm"></i>
+                                    </div>
+                                    <div class="text-left">
+                                        <span class="block text-xs font-bold text-gray-800">100% Gratis</span>
+                                        <span class="text-[10px] text-gray-400">Infaq sukarela diperbolehkan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section class="py-12 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Stat 1 -->
+                <div class="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="w-14 h-14 rounded-2xl bg-abataGreenDark/10 flex items-center justify-center text-abataGreenDark flex-shrink-0">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-extrabold text-slate-800 tracking-tight">400+</span>
+                        <span class="text-sm text-gray-500 font-medium">Santri Aktif</span>
+                    </div>
+                </div>
+                <!-- Stat 2 -->
+                <div class="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="w-14 h-14 rounded-2xl bg-abataOrange/10 flex items-center justify-center text-abataOrange flex-shrink-0">
+                        <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-extrabold text-slate-800 tracking-tight">6</span>
+                        <span class="text-sm text-gray-500 font-medium">Asatidzah Pengampu</span>
+                    </div>
+                </div>
+                <!-- Stat 3 -->
+                <div class="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="w-14 h-14 rounded-2xl bg-abataGreenLight/10 flex items-center justify-center text-abataGreenLight flex-shrink-0">
+                        <i data-lucide="clock" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-extrabold text-slate-800 tracking-tight">60 mnt</span>
+                        <span class="text-sm text-gray-500 font-medium">Sesi Belajar</span>
+                    </div>
+                </div>
+                <!-- Stat 4 -->
+                <div class="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-700 flex-shrink-0">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-extrabold text-slate-800 tracking-tight">Rp 0</span>
+                        <span class="text-sm text-gray-500 font-medium">Spp / Biaya Bulanan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION (Tentang Kami) -->
+    <section id="tentang" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Info Grid & Syarat -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="relative bg-amber-50 p-6 rounded-3xl border border-amber-200 shadow-md">
+                        <div class="absolute -top-4 -left-4 w-12 h-12 bg-abataOrange/20 rounded-xl flex items-center justify-center text-abataOrange">
+                            <i data-lucide="quote" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-amber-900 mb-2">Visi Kemaslahatan</h4>
+                        <p class="text-sm text-amber-800 leading-relaxed">
+                            Mewujudkan lingkungan Sukoharjo bebas dari buta huruf Al-Qur'an dengan meniadakan sekat ekonomi, sehingga seluruh kalangan masyarakat bisa mengaji dengan benar dan faham ilmu tajwid.
+                        </p>
+                    </div>
+
+                    <!-- Highlight Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center">
+                            <div class="w-10 h-10 rounded-full bg-abataGreenDark/10 text-abataGreenDark flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="thumbs-up" class="w-5 h-5"></i>
+                            </div>
+                            <h5 class="font-bold text-sm text-slate-800">100% Gratis</h5>
+                            <p class="text-[11px] text-gray-400 mt-1">Tanpa biaya pendaftaran & SPP</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center">
+                            <div class="w-10 h-10 rounded-full bg-abataOrange/10 text-abataOrange flex items-center justify-center mx-auto mb-2">
+                                <i data-lucide="timer" class="w-5 h-5"></i>
+                            </div>
+                            <h5 class="font-bold text-sm text-slate-800">Waktu Efektif</h5>
+                            <p class="text-[11px] text-gray-400 mt-1">60 Menit per sesi belajar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Profil & Deskripsi -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="text-center lg:text-left space-y-2">
+                        <span class="text-sm font-extrabold tracking-wider text-abataOrange uppercase">Profil Griya Qur'an Abata</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                            Mencetak Generasi Qur'ani Sukoharjo Berakhlak Mulia
+                        </h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-abataGreenDark to-abataGreenLight mx-auto lg:mx-0 mt-4"></div>
+                    </div>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Griya Qur'an Abata berlokasi di **Sidorejo RT 3 RW 6, Weru, Sukoharjo**. Kami berupaya memfasilitasi kebutuhan umat terhadap bimbingan ibadah tilawah berkualitas tinggi. Didukung penuh oleh donatur dan kepedulian sosial, kami bangga mengasuh lebih dari <strong>400 santri aktif</strong> dengan sistem bimbingan intensif dari <strong>6 asatidzah kompeten</strong>.
+                    </p>
+
+                    <!-- Feature List -->
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 rounded-full bg-abataGreenDark/15 text-abataGreenDark mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Kelas Terstruktur 60 Menit</h4>
+                                <p class="text-sm text-gray-500">Materi padat, tepat sasaran, dengan interaksi tatap muka penuh perhatian demi menjaga kualitas tajwid.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 rounded-full bg-abataGreenDark/15 text-abataGreenDark mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Evaluasi & Ujian Berkala</h4>
+                                <p class="text-sm text-gray-500">Santri diuji kemampuannya untuk memastikan kefasihan pelafalan sebelum beranjak ke tingkat jilid/mushaf berikutnya.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 rounded-full bg-abataGreenDark/15 text-abataGreenDark mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Sistem Belajar Santun</h4>
+                                <p class="text-sm text-gray-500">Tidak hanya melatih kelancaran membaca, melainkan juga menanamkan akhlak karimah dalam adab menuntut ilmu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM BELAJAR -->
+    <section id="program" class="py-20 bg-gradient-to-b from-gray-50 to-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-sm font-extrabold tracking-wider text-abataGreenDark uppercase">Program Unggulan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">4 Kelas Pilihan Griya Qur'an Abata</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-abataGreenDark to-abataGreenLight mx-auto mt-4"></div>
+                <p class="text-gray-500 text-sm sm:text-base">Masing-masing program dirancang khusus dengan durasi belajar ideal **60 menit** per pertemuan dan didukung penuh oleh metode yang interaktif.</p>
+            </div>
+
+            <!-- Program Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Program 1 -->
+                <div class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-abataGreenDark flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="baby" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Tahsin Anak</h3>
+                        <p class="text-xs text-gray-400 font-semibold uppercase">Pendidikan Usia Dini</p>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            Belajar mengenal huruf hijaiyah, makhorijul huruf dasar, dan cara menyambung kata menggunakan metode ramah anak yang menyenangkan.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-abataGreenDark bg-abataGreenDark/10 px-2.5 py-1 rounded-full">Durasi: 60 Menit</span>
+                        <a href="#daftar" onclick="selectProgram('Tahsin Anak')" class="text-abataOrange font-bold text-sm hover:underline flex items-center gap-1">Daftar <i class="fas fa-chevron-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-abataOrange flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Tahsin Dewasa</h3>
+                        <p class="text-xs text-gray-400 font-semibold uppercase">Pendidikan Umum</p>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            Penyempurnaan pelafalan huruf dan kaidah ilmu tajwid praktis (ikhwan & akhwat terpisah) untuk meningkatkan kefasihan membaca Al-Qur'an.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-abataOrange bg-abataOrange/10 px-2.5 py-1 rounded-full">Durasi: 60 Menit</span>
+                        <a href="#daftar" onclick="selectProgram('Tahsin Dewasa')" class="text-abataOrange font-bold text-sm hover:underline flex items-center gap-1">Daftar <i class="fas fa-chevron-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-lime-100 text-lime-700 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Tahsin Guru Qur'an</h3>
+                        <p class="text-xs text-gray-400 font-semibold uppercase">Kaderisasi Pengajar</p>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            Mempersiapkan pengajar berkompeten tinggi dengan pemahaman tajwid mendalam secara teoritis serta bekal metode pembelajaran intensif ke santri.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-lime-750 bg-lime-100 text-lime-700 px-2.5 py-1 rounded-full">Durasi: 60 Menit</span>
+                        <a href="#daftar" onclick="selectProgram('Tahsin Guru Qur\'an')" class="text-abataOrange font-bold text-sm hover:underline flex items-center gap-1">Daftar <i class="fas fa-chevron-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="bookmark" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Tahfidz Anak</h3>
+                        <p class="text-xs text-gray-400 font-semibold uppercase">Hafalan Juz 30 & Pilihan</p>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            Membantu anak-anak menghafal surat pendek di juz 30 dengan tartil yang baik dan metode murojaah yang membekas kuat di ingatan.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-orange-600 bg-orange-100 px-2.5 py-1 rounded-full">Durasi: 60 Menit</span>
+                        <a href="#daftar" onclick="selectProgram('Tahfidz Anak')" class="text-abataOrange font-bold text-sm hover:underline flex items-center gap-1">Daftar <i class="fas fa-chevron-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- POJOK BELAJAR INTERAKTIF -->
+    <section id="pojok-belajar" class="py-20 bg-gradient-to-tr from-slate-900 to-slate-800 text-white relative overflow-hidden">
+        
+        <!-- Decoration background pattern -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-sm font-extrabold tracking-wider text-abataGreenLight uppercase">Pojok Belajar Abata</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Media Belajar Quran Interaktif</h2>
+                <p class="text-slate-300 text-sm sm:text-base">Gunakan modul interaktif di bawah ini untuk menguji pengetahuan tajwid Anda atau mendengarkan murottal tilawah.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Column: Kuis Tajwid Interaktif -->
+                <div class="lg:col-span-6 bg-slate-800/80 backdrop-blur border border-slate-700 p-6 sm:p-8 rounded-[2.5rem] shadow-xl relative">
+                    <div class="absolute top-4 right-4 bg-abataOrange/20 text-abataOrange border border-abataOrange/30 text-xs px-3 py-1 rounded-full font-bold">
+                        Skor Kuis: <span id="quiz-score">0</span>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="help-circle" class="text-abataGreenLight"></i> Asah Tajwid Abata
+                    </h3>
+
+                    <!-- Quiz Area Container -->
+                    <div id="quiz-container" class="space-y-6">
+                        <!-- Questions will render via Javascript -->
+                        <div id="quiz-question-box">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Pertanyaan 1 dari 5</span>
+                            <p id="quiz-question-text" class="text-lg font-bold text-white mt-2 leading-relaxed">
+                                Apa arti dari hukum bacaan "Ikhfa Haqiqi" secara bahasa?
+                            </p>
+                        </div>
+
+                        <!-- Answer Buttons Option Stack -->
+                        <div id="quiz-options-box" class="space-y-3">
+                            <!-- Options rendered dynamically -->
+                        </div>
+
+                        <div class="pt-4 flex flex-col gap-3">
+                            <p id="quiz-feedback" class="text-sm font-semibold hidden"></p>
+                            <button id="quiz-next-btn" class="hidden px-5 py-2.5 rounded-xl bg-abataGreenLight hover:bg-abataGreenLight/90 text-white font-semibold text-sm transition-all flex items-center gap-2 ml-auto">
+                                Lanjut <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Completion View -->
+                    <div id="quiz-completed-box" class="hidden text-center py-8 space-y-6">
+                        <div class="w-16 h-16 rounded-full bg-abataGreenLight/10 text-abataGreenLight flex items-center justify-center mx-auto text-3xl">
+                            <i data-lucide="trophy"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="text-2xl font-bold text-white">Luar Biasa!</h4>
+                            <p class="text-slate-300 text-sm max-w-sm mx-auto">Anda telah menyelesaikan Kuis Asah Tajwid Abata dengan hasil yang sangat baik.</p>
+                            <p class="text-3xl font-extrabold text-abataOrange mt-2" id="quiz-final-score">Skor: 100 / 100</p>
+                        </div>
+                        <button onclick="resetQuiz()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-abataGreenDark to-abataGreenLight text-white font-bold text-sm transition-all transform hover:scale-102">
+                            Ulangi Kuis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Tilawah Murottal Simulator -->
+                <div class="lg:col-span-6 bg-slate-800/80 backdrop-blur border border-slate-700 p-6 sm:p-8 rounded-[2.5rem] shadow-xl">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i data-lucide="music" class="text-abataOrange"></i> Pondok Tilawah Audio
+                    </h3>
+                    <p class="text-slate-400 text-xs mb-6">Dengarkan murattal tilawah merdu juz 30 pilihan sebagai inspirasi hafalan harian.</p>
+
+                    <!-- Player Interface Card -->
+                    <div class="bg-slate-900 border border-slate-700/50 p-6 rounded-2xl space-y-6">
+                        <div class="flex items-center gap-4">
+                            <!-- Custom CD Icon Rotation when playing -->
+                            <div id="audio-disc" class="w-16 h-16 rounded-full bg-gradient-to-tr from-abataGreenDark to-abataOrange flex items-center justify-center text-white text-2xl relative shadow-md shadow-slate-950/50">
+                                <i data-lucide="music-4" class="animate-pulse"></i>
+                                <div class="w-4 h-4 bg-slate-900 rounded-full absolute"></div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 id="audio-title" class="font-bold text-white leading-tight">Surah Al-Fatihah</h4>
+                                <p id="audio-sub" class="text-xs text-slate-400 mt-1">Syaikh Mishary Al-Alafasy</p>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar Container -->
+                        <div class="space-y-1.5">
+                            <div class="w-full h-1.5 bg-slate-700 rounded-full cursor-pointer relative" id="audio-progress-bar">
+                                <div id="audio-progress" class="h-full bg-abataGreenLight rounded-full w-0 transition-all duration-100"></div>
+                            </div>
+                            <div class="flex items-center justify-between text-[11px] text-slate-500 font-semibold">
+                                <span id="audio-current-time">00:00</span>
+                                <span id="audio-duration">00:00</span>
+                            </div>
+                        </div>
+
+                        <!-- Player Controls -->
+                        <div class="flex items-center justify-center gap-6">
+                            <button onclick="prevTrack()" class="p-2.5 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
+                                <i data-lucide="skip-back" class="w-5 h-5"></i>
+                            </button>
+                            <button id="play-btn" onclick="togglePlay()" class="w-14 h-14 rounded-full bg-abataOrange text-white hover:bg-abataOrange/90 transition-all flex items-center justify-center text-xl shadow-lg shadow-abataOrange/25 hover:scale-105 transform active:scale-95">
+                                <i data-lucide="play" id="play-icon" class="w-6 h-6 fill-white"></i>
+                            </button>
+                            <button onclick="nextTrack()" class="p-2.5 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
+                                <i data-lucide="skip-forward" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+
+                        <!-- Track list selectors inside the app -->
+                        <div class="pt-4 border-t border-slate-800 grid grid-cols-2 gap-2 text-xs">
+                            <button onclick="selectTrack(0)" class="playlist-btn p-2 rounded-xl text-left border border-slate-700 bg-slate-800/40 text-white font-medium hover:bg-slate-800 transition-colors" data-index="0">
+                                <span class="block font-semibold">1. Al-Fatihah</span>
+                                <span class="text-[10px] text-slate-400">Pembuka (7 ayat)</span>
+                            </button>
+                            <button onclick="selectTrack(1)" class="playlist-btn p-2 rounded-xl text-left border border-slate-700 bg-slate-800/40 text-slate-400 hover:bg-slate-800 transition-colors" data-index="1">
+                                <span class="block font-semibold">2. Al-Ikhlas</span>
+                                <span class="text-[10px] text-slate-400">Ikhlas (4 ayat)</span>
+                            </button>
+                            <button onclick="selectTrack(2)" class="playlist-btn p-2 rounded-xl text-left border border-slate-700 bg-slate-800/40 text-slate-400 hover:bg-slate-800 transition-colors" data-index="2">
+                                <span class="block font-semibold">3. Al-Falaq</span>
+                                <span class="text-[10px] text-slate-400">Waktu Subuh (5 ayat)</span>
+                            </button>
+                            <button onclick="selectTrack(3)" class="playlist-btn p-2 rounded-xl text-left border border-slate-700 bg-slate-800/40 text-slate-400 hover:bg-slate-800 transition-colors" data-index="3">
+                                <span class="block font-semibold">4. An-Nas</span>
+                                <span class="text-[10px] text-slate-400">Manusia (6 ayat)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Hidden HTML5 Audio Element -->
+                    <audio id="main-audio" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3"></audio>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FORM PENDAFTARAN ONLINE (100% GRATIS) -->
+    <section id="daftar" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-xl mx-auto space-y-3 mb-12">
+                <span class="text-sm font-extrabold tracking-wider text-abataOrange uppercase">Pendaftaran Santri</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Bergabung Tanpa Biaya</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-abataGreenDark to-abataGreenLight mx-auto mt-4"></div>
+                <p class="text-gray-500 text-sm">Seluruh program belajar 100% Gratis. Silakan isi form pendaftaran di bawah untuk penentuan jadwal placement test.</p>
+            </div>
+
+            <!-- Card-like Multi-Step Pendaftaran Container -->
+            <div class="bg-white border border-gray-150 rounded-[2.5rem] shadow-xl overflow-hidden relative">
+                
+                <!-- Visual progress bar header -->
+                <div class="h-2 bg-gray-100 w-full relative">
+                    <div id="form-progress" class="h-full bg-gradient-to-r from-abataGreenDark to-abataGreenLight w-1/3 transition-all duration-500"></div>
+                </div>
+
+                <!-- Form step titles visual indicators -->
+                <div class="grid grid-cols-3 text-center py-4 border-b border-gray-100 text-xs sm:text-sm font-bold text-gray-400">
+                    <span id="step-lbl-1" class="text-abataGreenDark flex items-center justify-center gap-1.5"><i class="fas fa-user-circle"></i> Profil Santri</span>
+                    <span id="step-lbl-2" class="flex items-center justify-center gap-1.5"><i class="fas fa-book-reader"></i> Pilih Program</span>
+                    <span id="step-lbl-3" class="flex items-center justify-center gap-1.5"><i class="fas fa-check-circle"></i> Verifikasi</span>
+                </div>
+
+                <form id="pendaftaran-form" class="p-6 sm:p-10 space-y-8" onsubmit="handleRegistrationSubmit(event)">
+                    
+                    <!-- STEP 1: Profil Santri -->
+                    <div id="form-step-1" class="space-y-6">
+                        <h4 class="text-lg font-bold text-slate-800 border-l-4 border-abataGreenDark pl-3">Lengkapi Data Diri Calon Santri</h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="nama_lengkap" class="block text-sm font-bold text-slate-700">Nama Lengkap <span class="text-red-500">*</span></label>
+                                <input type="text" id="nama_lengkap" required placeholder="Contoh: Muhammad Akhyar" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-abataGreenDark focus:ring-1 focus:ring-abataGreenDark outline-none transition-all">
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label for="tanggal_lahir" class="block text-sm font-bold text-slate-700">Tanggal Lahir <span class="text-red-500">*</span></label>
+                                <input type="date" id="tanggal_lahir" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-abataGreenDark focus:ring-1 focus:ring-abataGreenDark outline-none transition-all">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="nama_ortu" class="block text-sm font-bold text-slate-700">Nama Orang Tua / Wali (Bila Santri Anak-Anak)</label>
+                                <input type="text" id="nama_ortu" placeholder="Contoh: Joko Susilo" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-abataGreenDark focus:ring-1 focus:ring-abataGreenDark outline-none transition-all">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="email_santri" class="block text-sm font-bold text-slate-700">Alamat Email Kontak <span class="text-red-500">*</span></label>
+                                <input type="email" id="email_santri" required placeholder="Contoh: santri@gmail.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-abataGreenDark focus:ring-1 focus:ring-abataGreenDark outline-none transition-all">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="alamat" class="block text-sm font-bold text-slate-700">Alamat Rumah Lengkap (Sukoharjo & Sekitarnya) <span class="text-red-500">*</span></label>
+                            <textarea id="alamat" rows="3" required placeholder="Tuliskan nama jalan/dukuh, nomor rumah, RT, RW, Weru, Sukoharjo" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-abataGreenDark focus:ring-1 focus:ring-abataGreenDark outline-none transition-all resize-none"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Pilih Program Belajar -->
+                    <div id="form-step-2" class="space-y-6 hidden">
+                        <h4 class="text-lg font-bold text-slate-800 border-l-4 border-abataGreenDark pl-3">Pilihan Program Belajar (60 Menit / Sesi)</h4>
+                        
+                        <div class="space-y-3">
+                            <label class="block text-sm font-bold text-slate-700">Pilih Program Yang Ingin Diikuti <span class="text-red-500">*</span></label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <label class="program-radio-lbl border border-gray-200 rounded-2xl p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-all">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="program_select" value="Tahsin Anak" checked class="text-abataGreenDark focus:ring-abataGreenDark">
+                                        <span class="text-sm font-bold text-slate-800">Tahsin Anak</span>
+                                    </div>
+                                    <span class="text-xs bg-emerald-100 text-abataGreenDark px-2 py-0.5 rounded-full font-semibold">60 Mnt</span>
+                                </label>
+
+                                <label class="program-radio-lbl border border-gray-200 rounded-2xl p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-all">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="program_select" value="Tahsin Dewasa" class="text-abataGreenDark focus:ring-abataGreenDark">
+                                        <span class="text-sm font-bold text-slate-800">Tahsin Dewasa</span>
+                                    </div>
+                                    <span class="text-xs bg-amber-100 text-abataOrange px-2 py-0.5 rounded-full font-semibold">60 Mnt</span>
+                                </label>
+
+                                <label class="program-radio-lbl border border-gray-200 rounded-2xl p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-all">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="program_select" value="Tahsin Guru Qur'an" class="text-abataGreenDark focus:ring-abataGreenDark">
+                                        <span class="text-sm font-bold text-slate-800">Tahsin Guru Qur'an</span>
+                                    </div>
+                                    <span class="text-xs bg-lime-100 text-lime-700 px-2 py-0.5 rounded-full font-semibold">60 Mnt</span>
+                                </label>
+
+                                <label class="program-radio-lbl border border-gray-200 rounded-2xl p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-all">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="program_select" value="Tahfidz Anak" class="text-abataGreenDark focus:ring-abataGreenDark">
+                                        <span class="text-sm font-bold text-slate-800">Tahfidz Anak</span>
+                                    </div>
+                                    <span class="text-xs bg-orange-100 text-orange-600 px-2 py-0.5 rounded-full font-semibold">60 Mnt</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="pilihan_sesi" class="block text-sm font-bold text-slate-700">Pilihan Sesi Kelas <span class="text-red-500">*</span></label>
+                                <select id="pilihan_sesi" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-abataGreenDark focus:ring-1 focus:ring-abataGreenDark outline-none transition-all bg-white">
+                                    <option value="Sesi Pagi (08:00 - 09:00)">Sesi Pagi (08:00 - 09:00)</option>
+                                    <option value="Sesi Siang (13:30 - 14:30)">Sesi Siang (13:30 - 14:30)</option>
+                                    <option value="Sesi Sore (15:30 - 16:30)" selected>Sesi Sore (15:30 - 16:30)</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="kemampuan_awal" class="block text-sm font-bold text-slate-700">Tingkat Kemampuan Awal <span class="text-red-500">*</span></label>
+                                <select id="kemampuan_awal" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-abataGreenDark focus:ring-1 focus:ring-abataGreenDark outline-none transition-all bg-white">
+                                    <option value="Sama sekali belum mengenal huruf hijaiyah">Belum mengenal huruf hijaiyah</option>
+                                    <option value="Mengenal huruf hijaiyah, belum bisa menyambung">Mengenal huruf hijaiyah, belum lancar menyambung</option>
+                                    <option value="Sudah membaca terbata-bata">Sudah membaca terbata-bata</option>
+                                    <option value="Sudah lancar, ingin memperbagus tajwid">Sudah lancar, ingin memperbaiki tajwid murni</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Syarat & Ketentuan -->
+                    <div id="form-step-3" class="space-y-6 hidden text-center max-w-lg mx-auto py-4">
+                        <div class="w-16 h-16 rounded-full bg-emerald-100 text-abataGreenDark flex items-center justify-center mx-auto text-2xl mb-4">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-800">Verifikasi Bebas Biaya</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Pendaftaran ini dijamin **100% Gratis tanpa biaya pendaftaran, SPP, atau buku panduan**. Kami beroperasi penuh sebagai wadah sosial & syiar keislaman.
+                        </p>
+                        
+                        <label class="flex items-start gap-3 text-left p-4 bg-slate-50 rounded-2xl border border-gray-100 cursor-pointer">
+                            <input type="checkbox" required class="mt-1 text-abataGreenDark focus:ring-abataGreenDark rounded">
+                            <span class="text-xs text-gray-500 font-semibold leading-relaxed">Saya menyatakan bahwa data yang diisi adalah benar, berdomisili di sekitar Weru Sukoharjo, serta siap mengikuti kegiatan kelas 60 menit per sesi dengan disiplin.</span>
+                        </label>
+                    </div>
+
+                    <!-- Controls buttons footer inside card -->
+                    <div class="flex items-center justify-between pt-6 border-t border-gray-100">
+                        <button type="button" id="prev-btn" onclick="prevStep()" class="hidden px-6 py-3 rounded-xl border border-gray-200 hover:bg-gray-50 text-slate-700 font-bold text-sm transition-all flex items-center gap-2">
+                            <i class="fas fa-chevron-left text-xs"></i> Kembali
+                        </button>
+                        
+                        <button type="button" id="next-step-btn" onclick="nextStep()" class="ml-auto px-6 py-3 rounded-xl bg-gradient-to-r from-abataGreenDark to-abataGreenLight text-white font-bold text-sm transition-all transform hover:scale-102 shadow-md shadow-abataGreenDark/10 flex items-center gap-2">
+                            Selanjutnya <i class="fas fa-chevron-right text-xs"></i>
+                        </button>
+
+                        <button type="submit" id="submit-btn" class="hidden ml-auto px-8 py-3 rounded-xl bg-gradient-to-r from-abataGreenDark to-abataGreenLight text-white font-bold text-sm transition-all transform hover:scale-102 shadow-md shadow-abataGreenDark/20 flex items-center gap-2">
+                            Kirim Formulir (Gratis) <i class="fas fa-paper-plane text-xs"></i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALAMAT & LOKASI DETAIL -->
+    <section id="lokasi" class="py-16 bg-slate-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Text Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-sm font-extrabold tracking-wider text-abataOrange uppercase">Lokasi Griya Qur'an</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Berada Dekat dengan Anda di Weru, Sukoharjo</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-abataGreenDark to-abataGreenLight mt-4"></div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 rounded-xl bg-abataGreenDark/10 text-abataGreenDark mt-1">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Alamat Lengkap</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    Sidorejo RT 3 RW 6, Weru, Weru, Sukoharjo, Jawa Tengah, Indonesia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 rounded-xl bg-abataGreenLight/10 text-abataGreenLight mt-1">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Hubungi via Email</h4>
+                                <p class="text-sm text-gray-600">
+                                    griyaquranabata@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Block Map Placeholder -->
+                <div class="lg:col-span-7">
+                    <div class="relative bg-white border border-gray-200 rounded-[2.5rem] p-8 shadow-md overflow-hidden min-h-[300px] flex flex-col justify-between">
+                        <div class="absolute top-0 right-0 -z-10 opacity-10">
+                            <i data-lucide="map" class="w-72 h-72 text-abataGreenDark"></i>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <span class="bg-abataGreenDark/10 text-abataGreenDark px-3 py-1 rounded-full text-xs font-bold">Sukoharjo Makmur</span>
+                            <h3 class="text-xl font-bold text-slate-800">Peta & Akses Pengajian</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Gedung Griya Qur'an Abata terletak di kawasan Sidorejo, Weru. Akses jalan sangat ramah kendaraan roda dua maupun roda empat dengan lingkungan yang tenang dan kondusif untuk menuntut ilmu agama.
+                            </p>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex flex-wrap gap-3">
+                            <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1.5 rounded-xl font-semibold">Weru Sukoharjo</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1.5 rounded-xl font-semibold">Sidorejo RT 3 RW 6</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1.5 rounded-xl font-semibold">Dekat Balai Desa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-slate-900 text-slate-400 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-800">
+                
+                <!-- Col 1: Brand -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="flex flex-col leading-none">
+                            <span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Griya Qur'an</span>
+                            <div class="flex font-extrabold text-2xl tracking-tight select-none">
+                                <span class="text-abataGreenDark abata-shadow">A</span>
+                                <span class="text-abataGreenLight abata-shadow">B</span>
+                                <span class="text-abataGreenLight abata-shadow">A</span>
+                                <span class="text-abataOrange abata-shadow">T</span>
+                                <span class="text-abataOrange abata-shadow">A</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-sm">
+                        Lembaga bimbingan membaca & menghafal Al-Qur'an fabilillah di Weru, Sukoharjo. Mencetak generasi madani yang mengedepankan kualitas tajwid dan kemuliaan adab.
+                    </p>
+                    <!-- Social Media Links -->
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-abataGreenDark hover:text-white transition-colors text-sm">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-abataGreenDark hover:text-white transition-colors text-sm">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-abataGreenDark hover:text-white transition-colors text-sm">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Tautan Pintas</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li><a href="#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-white transition-colors">Profil Abata</a></li>
+                        <li><a href="#program" class="hover:text-white transition-colors">Program Belajar</a></li>
+                        <li><a href="#pojok-belajar" class="hover:text-white transition-colors">Kuis Tajwid</a></li>
+                        <li><a href="#daftar" class="hover:text-white transition-colors">Form Pendaftaran</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact & Info -->
+                <div class="lg:col-span-4 space-y-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Kontak & Lokasi</h4>
+                    <ul class="space-y-3 text-xs sm:text-sm">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-abataOrange flex-shrink-0 mt-0.5"></i>
+                            <span>Sidorejo RT 3 RW 6, Weru, Sukoharjo, Jawa Tengah</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="mail" class="w-5 h-5 text-abataGreenLight flex-shrink-0"></i>
+                            <span>griyaquranabata@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-2.5 text-slate-500 italic text-xs">
+                            <i data-lucide="phone-off" class="w-4 h-4 flex-shrink-0"></i>
+                            <span>Hubungi pendaftaran online melalui Formulir / Email</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright area footer -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-4">
+                <p>&copy; 2026 Griya Qur'an Abata. Hak Cipta Dilindungi.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hover:underline">Syarat Layanan</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:underline">Kebijakan Privasi</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SUCCESS MODAL FOR FORM SUBMISSION -->
+    <div id="success-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
+        <div class="bg-white rounded-[2.5rem] max-w-md w-full p-8 text-center space-y-6 shadow-2xl border border-gray-150 transform scale-95 transition-all">
+            <div class="w-20 h-20 bg-emerald-100 text-abataGreenDark rounded-full flex items-center justify-center text-4xl mx-auto shadow-md">
+                <i data-lucide="party-popper" class="animate-bounce"></i>
+            </div>
+            
+            <div class="space-y-2">
+                <h3 class="text-2xl font-extrabold text-slate-800">Alhamdulillah!</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Formulir pendaftaran atas nama <strong id="modal-student-name" class="text-abataGreenDark"></strong> berhasil dikirim tanpa biaya apapun.
+                </p>
+                <p class="text-xs text-gray-400">
+                    ID Registrasi: <span id="modal-reg-id" class="font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded"></span>
+                </p>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-150 p-4 rounded-2xl text-left text-xs text-amber-900 leading-relaxed">
+                <strong>Langkah Selanjutnya:</strong> Konfirmasi placement test dan rincian kelas 60 menit akan dikirimkan ke alamat email Anda <span id="modal-student-email" class="font-bold"></span> dalam kurun waktu 1x24 jam kerja.
+            </div>
+
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-abataGreenDark to-abataGreenLight text-white font-bold text-sm transition-all shadow-lg hover:shadow-xl active:scale-95">
+                Mengerti & Selesai
+            </button>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT LOGIC & INTERACTION -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        /* ------------------------------------
+         * MOBILE MENU TOGGLE
+         * ------------------------------------ */
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileAnchors = mobileMenu.querySelectorAll('a');
+        mobileAnchors.forEach(anchor => {
+            anchor.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        /* ------------------------------------
+         * KUIS TAJWID INTERAKTIF DATA & LOGIC
+         * ------------------------------------ */
+        const quizQuestions = [
+            {
+                question: "Apa hukum nun sukun atau tanwin ketika bertemu dengan huruf Ba (ب)?",
+                options: ["Idgham Bighunnah", "Ikhfa Haqiqi", "Iqlab", "Izhar Halqi"],
+                correctIndex: 2,
+                explanation: "Iqlab terjadi apabila nun mati/tanwin bertemu Ba (ب), dibaca merubah suara nun menjadi Mim mendengung."
+            },
+            {
+                question: "Manakah di bawah ini yang termasuk ke dalam huruf Izhar Halqi?",
+                options: ["ی , ر , م", "ء , هـ , ع", "ق , ط , d", "ب , ت , ث"],
+                correctIndex: 1,
+                explanation: "Huruf Izhar Halqi berjumlah 6 yaitu Hamzah (ء), Ha (هـ), 'Ain (ع), Ha (ح), Ghain (غ), dan Kha (kh)."
+            },
+            {
+                question: "Bagaimanakah cara membaca hukum Alif Lam Qomariyah?",
+                options: ["Melebur samar", "Terdengar jelas/terang", "Dipantulkan", "Ditebalkan sekali"],
+                correctIndex: 1,
+                explanation: "Alif Lam Qomariyah dibaca jelas (Muzhar) lam sukun-nya."
+            },
+            {
+                question: "Manakah di bawah ini yang merupakan kumpulan huruf Qolqolah?",
+                options: ["ب - ج - d - ط - q", "ف - ت - ح - ك - م", "خ - ص - ض - غ - ط", "ء - ن - j - هـ - r"],
+                correctIndex: 0,
+                explanation: "Huruf Qolqolah terkumpul dalam frasa 'Quthbu Jaddin' (ق , ط , b , ج , د)."
+            },
+            {
+                question: "Apa hukum bacaan apabila ada huruf Mim Mati bertemu huruf Ba (ب)?",
+                options: ["Ikhfa Syafawi", "Idgham Mimi", "Izhar Syafawi", "Iqlab"],
+                correctIndex: 0,
+                explanation: "Ikhfa Syafawi terjadi bila Mim Mati (مْ) bertemu huruf Ba (b) dibaca mendengung samar di bibir."
+            }
+        ];
+
+        let currentQuestionIdx = 0;
+        let score = 0;
+        let isAnswered = false;
+
+        const quizScoreEl = document.getElementById('quiz-score');
+        const questionTextEl = document.getElementById('quiz-question-text');
+        const optionsBoxEl = document.getElementById('quiz-options-box');
+        const quizFeedbackEl = document.getElementById('quiz-feedback');
+        const quizNextBtn = document.getElementById('quiz-next-btn');
+        const quizQuestionBox = document.getElementById('quiz-question-box');
+        const quizContainer = document.getElementById('quiz-container');
+        const quizCompletedBox = document.getElementById('quiz-completed-box');
+        const quizFinalScore = document.getElementById('quiz-final-score');
+
+        function loadQuestion() {
+            isAnswered = false;
+            quizFeedbackEl.classList.add('hidden');
+            quizNextBtn.classList.add('hidden');
+            
+            const currentQuestion = quizQuestions[currentQuestionIdx];
+            
+            quizQuestionBox.innerHTML = `
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Pertanyaan ${currentQuestionIdx + 1} dari ${quizQuestions.length}</span>
+                <p class="text-lg font-bold text-white mt-2 leading-relaxed">${currentQuestion.question}</p>
+            `;
+
+            optionsBoxEl.innerHTML = '';
+            currentQuestion.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full p-4 rounded-xl border border-slate-700 hover:border-slate-500 bg-slate-800 text-left text-sm font-semibold transition-all hover:bg-slate-750 flex items-center justify-between";
+                btn.innerHTML = `
+                    <span>${opt}</span>
+                    <i data-lucide="circle" class="w-4 h-4 text-slate-500"></i>
+                `;
+                btn.onclick = () => selectOption(idx, btn);
+                optionsBoxEl.appendChild(btn);
+            });
+            lucide.createIcons();
+        }
+
+        function selectOption(idx, btnElement) {
+            if (isAnswered) return;
+            isAnswered = true;
+
+            const currentQuestion = quizQuestions[currentQuestionIdx];
+            const allOptionBtns = optionsBoxEl.querySelectorAll('button');
+
+            if (idx === currentQuestion.correctIndex) {
+                btnElement.classList.add('border-emerald-500', 'bg-emerald-950/40');
+                btnElement.querySelector('i').outerHTML = `<i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i>`;
+                score += 20;
+                quizScoreEl.innerText = score;
+                quizFeedbackEl.innerHTML = `<span class="text-emerald-500 font-bold"><i class="fas fa-check-circle"></i> Tepat sekali!</span> <span class="text-xs text-slate-400 block">${currentQuestion.explanation}</span>`;
+            } else {
+                btnElement.classList.add('border-rose-500', 'bg-rose-950/40');
+                btnElement.querySelector('i').outerHTML = `<i data-lucide="x-circle" class="w-5 h-5 text-rose-500"></i>`;
+                
+                const correctBtn = allOptionBtns[currentQuestion.correctIndex];
+                correctBtn.classList.add('border-emerald-500', 'bg-emerald-950/40');
+                correctBtn.querySelector('i').outerHTML = `<i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i>`;
+                
+                quizFeedbackEl.innerHTML = `<span class="text-rose-500 font-bold"><i class="fas fa-times-circle"></i> Kurang tepat.</span> <span class="text-xs text-slate-400 block">${currentQuestion.explanation}</span>`;
+            }
+
+            allOptionBtns.forEach(btn => btn.disabled = true);
+            quizFeedbackEl.classList.remove('hidden');
+            quizNextBtn.classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        quizNextBtn.addEventListener('click', () => {
+            if (currentQuestionIdx < quizQuestions.length - 1) {
+                currentQuestionIdx++;
+                loadQuestion();
+            } else {
+                quizContainer.classList.add('hidden');
+                quizCompletedBox.classList.remove('hidden');
+                quizFinalScore.innerText = `Skor: ${score} / 100`;
+            }
+        });
+
+        function resetQuiz() {
+            currentQuestionIdx = 0;
+            score = 0;
+            quizScoreEl.innerText = score;
+            quizCompletedBox.classList.add('hidden');
+            quizContainer.classList.remove('hidden');
+            loadQuestion();
+        }
+
+        loadQuestion();
+
+
+        /* ------------------------------------
+         * PONDOK TILAWAH AUDIO PLAYER
+         * ------------------------------------ */
+        const tracks = [
+            {
+                title: "Surah Al-Fatihah",
+                audioUrl: "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3",
+                sub: "Syaikh Mishary Al-Alafasy"
+            },
+            {
+                title: "Surah Al-Ikhlas",
+                audioUrl: "https://cdn.islamic.network/quran/audio/128/ar.alafasy/112.mp3",
+                sub: "Syaikh Mishary Al-Alafasy"
+            },
+            {
+                title: "Surah Al-Falaq",
+                audioUrl: "https://cdn.islamic.network/quran/audio/128/ar.alafasy/113.mp3",
+                sub: "Syaikh Mishary Al-Alafasy"
+            },
+            {
+                title: "Surah An-Nas",
+                audioUrl: "https://cdn.islamic.network/quran/audio/128/ar.alafasy/114.mp3",
+                sub: "Syaikh Mishary Al-Alafasy"
+            }
+        ];
+
+        let currentTrackIdx = 0;
+        let isPlaying = false;
+
+        const mainAudio = document.getElementById('main-audio');
+        const playBtn = document.getElementById('play-btn');
+        const playIcon = document.getElementById('play-icon');
+        const audioTitle = document.getElementById('audio-title');
+        const audioSub = document.getElementById('audio-sub');
+        const audioProgress = document.getElementById('audio-progress');
+        const audioCurrentTime = document.getElementById('audio-current-time');
+        const audioDuration = document.getElementById('audio-duration');
+        const audioProgressBar = document.getElementById('audio-progress-bar');
+        const audioDisc = document.getElementById('audio-disc');
+
+        function selectTrack(idx) {
+            currentTrackIdx = idx;
+            mainAudio.src = tracks[idx].audioUrl;
+            audioTitle.innerText = tracks[idx].title;
+            audioSub.innerText = tracks[idx].sub;
+            
+            const allPlBtns = document.querySelectorAll('.playlist-btn');
+            allPlBtns.forEach((btn, pidx) => {
+                if (pidx === idx) {
+                    btn.classList.add('border-abataGreenLight', 'text-white');
+                    btn.classList.remove('text-slate-400', 'animate-pulse');
+                } else {
+                    btn.classList.remove('border-abataGreenLight', 'text-white');
+                    btn.classList.add('text-slate-400');
+                }
+            });
+
+            if (isPlaying) {
+                mainAudio.play();
+            } else {
+                togglePlay();
+            }
+        }
+
+        function togglePlay() {
+            if (isPlaying) {
+                mainAudio.pause();
+                playIcon.setAttribute('data-lucide', 'play');
+                audioDisc.classList.remove('animate-spin');
+                isPlaying = false;
+            } else {
+                mainAudio.play().then(() => {
+                    playIcon.setAttribute('data-lucide', 'pause');
+                    audioDisc.classList.add('animate-spin');
+                    isPlaying = true;
+                }).catch(err => {
+                    console.log("Audio play error", err);
+                });
+            }
+            lucide.createIcons();
+        }
+
+        function prevTrack() {
+            let next = currentTrackIdx - 1;
+            if (next < 0) next = tracks.length - 1;
+            selectTrack(next);
+        }
+
+        function nextTrack() {
+            let next = currentTrackIdx + 1;
+            if (next >= tracks.length) next = 0;
+            selectTrack(next);
+        }
+
+        mainAudio.addEventListener('timeupdate', () => {
+            const current = mainAudio.currentTime;
+            const duration = mainAudio.duration || 0;
+            const percent = (current / duration) * 100;
+            audioProgress.style.width = `${percent}%`;
+
+            audioCurrentTime.innerText = formatTime(current);
+            audioDuration.innerText = formatTime(duration);
+        });
+
+        audioProgressBar.addEventListener('click', (e) => {
+            const width = audioProgressBar.clientWidth;
+            const clickX = e.offsetX;
+            const duration = mainAudio.duration || 0;
+            mainAudio.currentTime = (clickX / width) * duration;
+        });
+
+        function formatTime(sec) {
+            const minutes = Math.floor(sec / 60);
+            const seconds = Math.floor(sec % 60);
+            return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        selectTrack(0);
+        isPlaying = false;
+
+
+        /* ------------------------------------
+         * MULTI-STEP REGISTRATION FORM LOGIC
+         * ------------------------------------ */
+        let currentStep = 1;
+
+        const prevBtn = document.getElementById('prev-btn');
+        const nextStepBtn = document.getElementById('next-step-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const formProgress = document.getElementById('form-progress');
+
+        function updateFormUI() {
+            document.getElementById('form-step-1').classList.add('hidden');
+            document.getElementById('form-step-2').classList.add('hidden');
+            document.getElementById('form-step-3').classList.add('hidden');
+            
+            document.getElementById(`form-step-${currentStep}`).classList.remove('hidden');
+
+            document.getElementById('step-lbl-1').className = "flex items-center justify-center gap-1.5";
+            document.getElementById('step-lbl-2').className = "flex items-center justify-center gap-1.5";
+            document.getElementById('step-lbl-3').className = "flex items-center justify-center gap-1.5";
+
+            for (let i = 1; i <= currentStep; i++) {
+                document.getElementById(`step-lbl-${i}`).classList.add('text-abataGreenDark');
+            }
+
+            if (currentStep === 1) {
+                prevBtn.classList.add('hidden');
+                nextStepBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+                formProgress.className = "h-full bg-gradient-to-r from-abataGreenDark to-abataGreenLight w-1/3 transition-all duration-500";
+            } else if (currentStep === 2) {
+                prevBtn.classList.remove('hidden');
+                nextStepBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+                formProgress.className = "h-full bg-gradient-to-r from-abataGreenDark to-abataGreenLight w-2/3 transition-all duration-500";
+            } else if (currentStep === 3) {
+                prevBtn.classList.remove('hidden');
+                nextStepBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+                formProgress.className = "h-full bg-gradient-to-r from-abataGreenDark to-abataGreenLight w-full transition-all duration-500";
+            }
+        }
+
+        function validateStep() {
+            if (currentStep === 1) {
+                const nama = document.getElementById('nama_lengkap').value.trim();
+                const tgl = document.getElementById('tanggal_lahir').value;
+                const email = document.getElementById('email_santri').value.trim();
+                const alamat = document.getElementById('alamat').value.trim();
+
+                if (!nama || !tgl || !email || !alamat) {
+                    showValidationTip("Harap lengkapi seluruh kolom wajib berkode bintang (*)!");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function showValidationTip(message) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-5 right-5 z-[200] bg-red-600 text-white font-bold text-sm px-6 py-4 rounded-2xl shadow-xl transition-all flex items-center gap-3";
+            toast.innerHTML = `<i class="fas fa-exclamation-triangle"></i> <span>${message}</span>`;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 400);
+            }, 3500);
+        }
+
+        function nextStep() {
+            if (validateStep()) {
+                currentStep++;
+                updateFormUI();
+            }
+        }
+
+        function prevStep() {
+            currentStep--;
+            updateFormUI();
+        }
+
+        function selectProgram(progName) {
+            const radios = document.getElementsByName('program_select');
+            radios.forEach(radio => {
+                if (radio.value === progName) radio.checked = true;
+            });
+            document.getElementById('daftar').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleRegistrationSubmit(event) {
+            event.preventDefault();
+            
+            const studentName = document.getElementById('nama_lengkap').value;
+            const studentEmail = document.getElementById('email_santri').value;
+            const randomRegId = 'ABATA-' + Math.floor(100000 + Math.random() * 900000);
+
+            document.getElementById('modal-student-name').innerText = studentName;
+            document.getElementById('modal-reg-id').innerText = randomRegId;
+            document.getElementById('modal-student-email').innerText = studentEmail;
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.getElementById('pendaftaran-form').reset();
+            currentStep = 1;
+            updateFormUI();
+        }
+    </script>
+</body>
+</html>
+
+```
